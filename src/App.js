@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import Header from "./Header";
+import Services from "./Service";
+import WhyChooseUs from "./WhyChooseUs";
+import NetworkSolutions from "./NetworkSolutions";
+import Footer from "./Footer";
+import Hero from "./Hero"; // Fixed duplicate import
+import Product from "./Product";
+import Solutions from "./Solutions"; // Fixed spelling error
+import Company from "./Company";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <main className="pt-20">
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/solutions" element={<Solutions />} /> {/* Fixed typo */}
+          <Route path="/company" element={<Company />} />
+        </Routes>
+      </main>
+
+      <Services />
+      <WhyChooseUs />
+      <NetworkSolutions />
+      <Footer />
+    </Router>
   );
 }
-
-export default App;
