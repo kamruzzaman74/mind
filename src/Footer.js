@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} MindHex365 Technologies. All Rights Reserved.</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} MindHex Technology. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
