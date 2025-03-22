@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} MindHex365 Technologies. All Rights Reserved.
+          © {new Date().getFullYear()} MindHex Technology. All Rights Reserved.
         </div>
       </div>
     </footer>
