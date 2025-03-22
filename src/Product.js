@@ -20,7 +20,7 @@ function Product() {
         </motion.h1>
         
         <motion.img 
-          src="https://via.placeholder.com/300" 
+          src="mm.webp" 
           alt="Product" 
           className="w-full rounded-lg mb-4"
           initial={{ opacity: 0, scale: 0.9 }}
