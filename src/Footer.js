@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
           {/* Company Info */}
           <div>
-            <h2 className="text-3xl font-extrabold text-yellow-400">MindHex365 Technologies</h2>
+            <h2 className="text-3xl font-extrabold text-yellow-400">MindHex Technology</h2>
             <p className="text-gray-300 mt-3">
               Transforming industries with **AI, blockchain, and cloud solutions** for a smarter, connected future.
             </p>

@@ -3,7 +3,44 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen bg-gradient-to-r from-gray-900 to-gray-800 flex items-center justify-center text-white overflow-hidden">
+    <section className="relative h-screen bg-white flex flex-col-reverse md:flex-row items-center justify-center text-gray-900 overflow-hidden px-6 md:px-16">
+      {/* Hero Content */}
+      <motion.div 
+        className="relative z-10 text-center md:text-left max-w-2xl"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1 
+          className="text-4xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          Innovate. Disrupt. <br />
+          <span className="text-yellow-500">Lead the Future</span>
+        </motion.h1>
+
+        <motion.p 
+          className="text-lg md:text-2xl mt-6 text-gray-600 max-w-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 0.5 }}
+        >
+          Pioneering advancements in AI, Blockchain, and Cloud Technology to redefine the digital landscape.
+        </motion.p>
+      </motion.div>
+
+      {/* Image Section */}
+      <motion.div 
+        className="relative w-full md:w-1/2 flex justify-center"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        <img src="hh.webp" alt="Innovative Technology" className="w-full max-w-lg rounded-lg shadow-lg" />
+      </motion.div>
+
       {/* Floating Elements */}
       <motion.div 
         className="absolute top-10 left-10 w-20 h-20 bg-blue-500 rounded-full blur-3xl opacity-40"
@@ -21,42 +58,15 @@ const Hero = () => {
         transition={{ duration: 6, repeat: Infinity }}
       ></motion.div>
 
-      {/* Hero Content */}
+      {/* Scroll Down Indicator */}
       <motion.div 
-        className="relative z-10 text-center px-6 md:px-12"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <motion.h1 
-          className="text-5xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
-          Innovate. Disrupt. <br />
-          <span className="text-yellow-400">Lead the Future</span>
-        </motion.h1>
-
-        <motion.p 
-          className="text-lg md:text-2xl mt-6 text-gray-300 max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-        >
-          Pioneering advancements in AI, Blockchain, and Cloud Technology to redefine the digital landscape.
-        </motion.p>
-
-        {/* Scroll Down Indicator */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <svg className="w-10 h-10 text-blue-400 drop-shadow-md" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7 7 7-7"></path>
-          </svg>
-        </motion.div>
+        <svg className="w-10 h-10 text-blue-400 drop-shadow-md" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7 7 7-7"></path>
+        </svg>
       </motion.div>
     </section>
   );

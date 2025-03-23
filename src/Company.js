@@ -1,69 +1,55 @@
-import React from "react";
 import { motion } from "framer-motion";
 
-function Company() {
+export default function CompanyPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+    <div className="min-h-screen bg-white flex items-center justify-center p-6">
       <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }} 
-        animate={{ opacity: 1, scale: 1 }} 
-        transition={{ duration: 0.6 }}
-        className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-4xl"
+        initial={{ opacity: 0, y: 50 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8 }}
+        className="bg-white shadow-xl rounded-2xl p-10 max-w-5xl w-full text-center border border-gray-200"
       >
-        <motion.h1 
-          className="text-4xl md:text-5xl font-extrabold text-center text-indigo-700 mb-6"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Welcome to MindHex365 Technologies
-        </motion.h1>
-        
-        <motion.p 
-          className="text-gray-700 text-center text-lg mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          Innovating the future with cutting-edge blockchain and AI solutions.
-        </motion.p>
+        <h2 className="text-4xl font-extrabold text-blue-700 mb-4">Welcome to MindHex365 Technologies</h2>
+        <p className="text-gray-600 mb-6 text-lg">
+          We specialize in cutting-edge software solutions and high-speed ISP services, ensuring businesses and individuals stay ahead in the digital era.
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div 
-            className="p-6 bg-indigo-100 rounded-lg shadow-lg"
             whileHover={{ scale: 1.05 }}
+            className="p-6 bg-blue-100 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl font-bold text-indigo-800">Blockchain Development</h2>
-            <p className="text-gray-600">Creating secure, decentralized solutions for the digital era.</p>
+            <h3 className="text-2xl font-bold text-blue-800">Software Solutions</h3>
+            <p className="text-gray-700">Providing custom software development, AI integration, and blockchain solutions tailored to your business needs.</p>
           </motion.div>
           
           <motion.div 
-            className="p-6 bg-indigo-100 rounded-lg shadow-lg"
             whileHover={{ scale: 1.05 }}
+            className="p-6 bg-blue-100 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl font-bold text-indigo-800">AI-Powered Solutions</h2>
-            <p className="text-gray-600">Harnessing artificial intelligence for smarter, faster decision-making.</p>
+            <h3 className="text-2xl font-bold text-blue-800">High-Speed ISP Services</h3>
+            <p className="text-gray-700">Delivering ultra-fast, reliable internet solutions for businesses and homes, ensuring seamless connectivity.</p>
           </motion.div>
-          
-          <motion.div 
-            className="p-6 bg-indigo-100 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h2 className="text-2xl font-bold text-indigo-800">Cloud Computing</h2>
-            <p className="text-gray-600">Empowering businesses with scalable and secure cloud services.</p>
-          </motion.div>
-          
-          <motion.div 
-            className="p-6 bg-indigo-100 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h2 className="text-2xl font-bold text-indigo-800">Cybersecurity</h2>
-            <p className="text-gray-600">Protecting digital assets with next-gen security solutions.</p>
-          </motion.div>
+        </div>
+        
+        <div className="mt-8">
+          <h3 className="text-3xl font-bold text-blue-700 mb-4">Why Choose Us?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div whileHover={{ scale: 1.05 }} className="p-6 bg-gray-100 rounded-lg shadow-md">
+              <h4 className="text-xl font-semibold text-gray-800">Innovative Technology</h4>
+              <p className="text-gray-600">We leverage the latest technologies to create secure, scalable, and high-performance solutions.</p>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="p-6 bg-gray-100 rounded-lg shadow-md">
+              <h4 className="text-xl font-semibold text-gray-800">Customer-Centric Approach</h4>
+              <p className="text-gray-600">Our services are tailored to meet the unique needs of every client, ensuring maximum satisfaction.</p>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="p-6 bg-gray-100 rounded-lg shadow-md">
+              <h4 className="text-xl font-semibold text-gray-800">24/7 Support</h4>
+              <p className="text-gray-600">Our dedicated team is available round the clock to provide technical support and assistance.</p>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </div>
   );
 }
-
-export default Company;
