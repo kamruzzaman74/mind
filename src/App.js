@@ -11,6 +11,7 @@ import Solutions from "./Solutions"; // Fixed spelling error
 import Company from "./Company";
 import Contact from "./Contact";
 import Isp from "./Isp";
+import ModernAppDevelopment from "./ModernAppDevelopment"
 export default function App() {
   return (
     <Router>
@@ -26,7 +27,7 @@ export default function App() {
 
         </Routes>
       </main>
-
+      <ModernAppDevelopment/>
       <Services />
       <Isp/>
       <WhyChooseUs />

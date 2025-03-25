@@ -1,8 +1,9 @@
-import React from "react";
-import { FaLaptopCode, FaCloud, FaMobileAlt, FaDatabase, FaServer, FaCogs, FaGlobe, FaShoppingCart, FaShieldAlt } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaLaptopCode, FaCloud, FaMobileAlt, FaDatabase, FaServer, FaGlobe, FaShoppingCart, FaShieldAlt } from "react-icons/fa";
 import { MdDesignServices, MdOutlinePhonelinkRing } from "react-icons/md";
 import { BiNetworkChart } from "react-icons/bi";
-import { RiComputerLine } from "react-icons/ri";
+import { motion } from "framer-motion";
+import { ClipLoader } from "react-spinners"; // Import ClipLoader from react-spinners
 
 const services = [
   {
@@ -35,36 +36,74 @@ const services = [
 ];
 
 const Services = () => {
-  return (
-    <section className="bg-white py-16 px-6 md:px-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 animate__animated animate__fadeInDown">
-          🚀 Our Services
-        </h2>
-        <p className="text-lg text-gray-600 mt-4 animate__animated animate__fadeIn">
-          We offer cutting-edge technology solutions to help your business grow.
-        </p>
-      </div>
+  const [loading, setLoading] = useState(true);
 
-      {services.map((section, index) => (
-        <div key={index} className="mb-16">
-          <h3 className="text-3xl font-bold text-blue-600 mb-6">{section.category}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
-            {section.items.map((service, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-r from-blue-50 to-white shadow-lg p-6 rounded-2xl transition transform hover:-translate-y-2 hover:shadow-xl flex items-center space-x-4"
-              >
-                <div className="text-blue-600 text-4xl">{service.icon}</div>
-                <div>
-                  <h4 className="text-xl font-semibold">{service.title}</h4>
-                  <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
+
+  return (
+    <section className="bg-gradient-to-b from-purple-100 to-blue-50 py-16 px-6 md:px-16">
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <ClipLoader color="#3b82f6" loading={loading} size={50} />
         </div>
-      ))}
+      ) : (
+        <>
+          <div className="text-center mb-12">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wider leading-tight"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              🚀 Our Services
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto font-sans"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              We offer cutting-edge technology solutions designed to accelerate your business growth and innovation.
+            </motion.p>
+          </div>
+
+          {services.map((section, index) => (
+            <motion.div 
+              key={index} 
+              className="mb-16"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: index * 0.2, duration: 0.8 }}
+            >
+              <h3 className="text-3xl font-bold text-indigo-600 mb-6">{section.category}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {section.items.map((service, i) => (
+                  <motion.div
+                    key={i}
+                    className="bg-white shadow-lg p-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex flex-col items-center justify-between space-y-4"
+                    whileHover={{ scale: 1.05 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 * i, duration: 0.8 }}
+                  >
+                    <div className="text-indigo-600 text-5xl transform hover:rotate-12 transition duration-300">{service.icon}</div>
+                    <h4 className="text-xl font-semibold text-gray-800">{service.title}</h4>
+                    <p className="text-gray-600 text-sm">{service.desc}</p>
+                    <motion.div 
+                      className="w-full h-1 bg-gradient-to-r from-pink-500 to-yellow-500 mt-4"
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ delay: 0.5, duration: 1.5 }}
+                    ></motion.div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </>
+      )}
     </section>
   );
 };

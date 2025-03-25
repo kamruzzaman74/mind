@@ -9,7 +9,7 @@ export default function CompanyPage() {
         transition={{ duration: 0.8 }}
         className="bg-white shadow-xl rounded-2xl p-10 max-w-5xl w-full text-center border border-gray-200"
       >
-        <h2 className="text-4xl font-extrabold text-blue-700 mb-4">Welcome to MindHex365 Technologies</h2>
+        <h2 className="text-4xl font-extrabold text-blue-700 mb-4">Welcome to MindHex Technologies</h2>
         <p className="text-gray-600 mb-6 text-lg">
           We specialize in cutting-edge software solutions and high-speed ISP services, ensuring businesses and individuals stay ahead in the digital era.
         </p>
