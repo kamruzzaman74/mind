@@ -21,7 +21,7 @@ export default function ContactPage() {
             className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow-sm"
           >
             <Phone className="text-blue-600" size={28} />
-            <span className="text-lg font-medium">Phone: 01714682259</span>
+            <span className="text-lg font-medium">Hotline:09603000365</span>
           </motion.div>
           
           <motion.div 
