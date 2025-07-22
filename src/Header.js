@@ -13,7 +13,7 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Company Name */}
         <Link to="/" className="text-2xl font-bold text-blue-700">
-          MindHex Technology
+          Kreatustech
         </Link>
         
         {/* Desktop Navigation */}
