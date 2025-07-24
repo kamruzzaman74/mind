@@ -29,7 +29,7 @@ export default function ContactPage() {
             className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow-sm"
           >
             <Mail className="text-blue-600" size={28} />
-            <span className="text-lg font-medium">Email: hossaindhk67@gmail.com</span>
+            <span className="text-lg font-medium">Email: info@kreatustech.com</span>
           </motion.div>
           
           <motion.div 
