@@ -25,7 +25,7 @@ function Solutions() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          MindHex365 Technologies delivers innovative solutions in blockchain, AI, cloud computing, and cybersecurity.
+          kreatUs Technology delivers innovative solutions in blockchain, AI, cloud computing, and cybersecurity.
         </motion.p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

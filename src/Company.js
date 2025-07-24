@@ -9,7 +9,7 @@ export default function CompanyPage() {
         transition={{ duration: 0.8 }}
         className="bg-white shadow-xl rounded-2xl p-10 max-w-5xl w-full text-center border border-gray-200"
       >
-        <h2 className="text-4xl font-extrabold text-blue-700 mb-4">Welcome to kreatustech</h2>
+        <h2 className="text-4xl font-extrabold text-blue-700 mb-4">Welcome to kreatUs Technology</h2>
         <p className="text-gray-600 mb-6 text-lg">
           We specialize in cutting-edge software solutions and high-speed ISP services, ensuring businesses and individuals stay ahead in the digital era.
         </p>
@@ -27,8 +27,8 @@ export default function CompanyPage() {
             whileHover={{ scale: 1.05 }}
             className="p-6 bg-blue-100 rounded-lg shadow-md"
           >
-            <h3 className="text-2xl font-bold text-blue-800">High-Speed ISP Services</h3>
-            <p className="text-gray-700">Delivering ultra-fast, reliable internet solutions for businesses and homes, ensuring seamless connectivity.</p>
+            <h3 className="text-2xl font-bold text-blue-800">Home Software Services</h3>
+            <p className="text-gray-700">Delivering ultra-fast, reliable  solutions for businesses and homes, ensuring seamless connectivity.</p>
           </motion.div>
         </div>
         

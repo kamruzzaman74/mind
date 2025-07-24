@@ -28,9 +28,9 @@ const services = [
   {
     category: "Data Center Services",
     items: [
-      { icon: <FaCloud />, title: "Virtual Private Server (VPS)", desc: "Get secure, scalable VPS hosting for your business needs." },
-      { icon: <FaServer />, title: "Dedicated Server", desc: "Enjoy dedicated hosting solutions with high security and reliability." },
-      { icon: <FaShieldAlt />, title: "Shared Hosting", desc: "Affordable and secure shared hosting for businesses of all sizes." },
+      { icon: <FaCloud />, title: "Modern Software Solutions", desc: "Get secure, scalable software for your business needs." },
+      { icon: <FaServer />, title: "Tech Enterpriseship", desc: "Enjoy solutions with high security and reliability." },
+      { icon: <FaShieldAlt />, title: "Modern Tech", desc: "Affordable modern technology for businesses of all sizes." },
     ],
   },
 ];
