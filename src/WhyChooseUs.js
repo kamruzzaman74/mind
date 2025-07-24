@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
           🚀 Who <span className="text-blue-600">We Are</span>
         </h2>
         <p className="text-lg text-gray-600 mt-4 animate__animated animate__fadeIn">
-          At <strong>KreatUs  Technology</strong>, we don’t just build software—we craft digital experiences that redefine industries.  
+          At <strong>KreatUs  Technologies</strong>, we don’t just build software—we craft digital experiences that redefine industries.  
         </p>
       </div>
 

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
         {/* Company Info */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Kreatustech</h2>
+          <h2 className="text-2xl font-bold mb-4">KreatUs Technologies</h2>
           <p className="text-sm">
             Empowering businesses with technology, creativity, and innovation.
             Your digital success is our mission.
